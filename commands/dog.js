@@ -21,6 +21,6 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
     name: "dog",
     description: "Sends a random dog photo",
-    usage: "",
+    usage: "dog",
     type: "Fun" 
 }
