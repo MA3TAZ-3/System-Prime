@@ -29,20 +29,20 @@ const queue = new Map();
 const imdb = require("imdb-api");
 const cooldown = new Set();
 const cdtime = 5;
-const prefix = "b!"
-client.login("")
+const prefix = "PREFIX"
+client.login("TOKEN")
 client.on("ready", () => {
   console.log("ALLAH AKBAR");
   console.log("♔♔♔♔♔♔♔♔♔♔♔♔♔♔♔♔♔♔♔");
   console.log(`Logged in as ${client.user.tag}!`);
   console.log("بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ");
     console.log(client.guilds.cache.map(c => `${c.name} : ${c.me.hasPermission(8)} : ${c.memberCount}`));
-  client.user.setActivity( `${prefix}help | BLACK SESTAM VERSION 12.4.0 | SERVERS ${client.guilds.cache.size} | Users ${client.users.cache.size} `);
+  client.user.setActivity( `${prefix}help | MA3TAZ SYSTEM VERSION 12.4.0 | SERVERS ${client.guilds.cache.size} | Users ${client.users.cache.size} `);
   console.log(`Logined`);
 });
 
 
-const wlcblack = JSON.parse(fs.readFileSync("./black.json", "utf8"));
+const wlcma3taz = JSON.parse(fs.readFileSync("./ma3taz.json", "utf8"));
 client.on("message", message => {
   if (!message.channel.guild) return;
   let room = message.content.split(" ").slice(1).join(" ");
@@ -70,7 +70,7 @@ client.on("message", message => {
       channel: channel.name,
       onoff: 'On',
     };
-    fs.writeFile("./black.json", JSON.stringify(wlcblack), err => {
+    fs.writeFile("./ma3taz.json", JSON.stringify(wlcma3taz), err => {
       if (err) console.error(err);
     });
   }
@@ -85,13 +85,13 @@ let embed = new Discord.MessageEmbed()
 channel.send(embed);
 
 });
-client.on ("guildMemberAdd", async (black) => {
+client.on ("guildMemberAdd", async (ma3taz) => {
     if (!wlcblack[black.guild.id])
       wlcblack[black.guild.id] = {
         onoff: "Off"
       };
-    if (wlcblack[black.guild.id].onoff === "Off") return;
-   var channel = client.guild.channels.cache.find(r => r.name === wlcblack[black.guild.id].channel);
+    if (wlcblack[ma3taz.guild.id].onoff === "Off") return;
+   var channel = client.guild.channels.cache.find(r => r.name === wlcblack[ma3taz.guild.id].channel);
         if (!channel) return false;
         var canvas = Canvas.createCanvas(400, 200);
         var ctx = canvas.getContext("2d");
@@ -176,7 +176,7 @@ let embed = new Discord.MessageEmbed()
 message.channel.send(embed)
   }})
 
-/////created by black jack
+/////created by MA3TAZ
 
 
 
@@ -461,7 +461,7 @@ onoff: 'Off',
           }
 
         }) 
- ////by black jack
+ ////by MA3TAZ
 
 
 
@@ -1269,7 +1269,7 @@ client.on("message", message => {
   var nick = args.join(" ");
   if(!user || !args) return message.channel.send(`**${prefix}nick @tag NickName**`);
   message.guild.member(user.user).setNickname(`${nick}`);
-  const blackj = new Discord.MessageEmbed()
+  const ma3taz = new Discord.MessageEmbed()
   .setAuthor(message.author.username,message.author.avatarURL())
   .setThumbnail(message.author.avatarURL())
   .setTitle("**Done The Changed NickName**")
@@ -1277,7 +1277,7 @@ client.on("message", message => {
   .addField("Nickname New", nick)
   .addField("Moderation", message.author.tag)
   .setColor("RANDOM")
-  message.channel.send(blackj)
+  message.channel.send(ma3taz)
   }
   });
 
