@@ -1,1 +1,1 @@
-worker: node black.js
+worker: node ma3taz.js
