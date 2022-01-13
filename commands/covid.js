@@ -45,7 +45,7 @@ module.exports = {
                 let deaths = data.deaths.value.toLocaleString()
 
                 const embed = new Discord.MessageEmbed()
-                .setTitle(`-19 Stats for **${countries}**`)
+                .setTitle(`COVID-19 Stats for **${countries}**`)
                 .addField('Confirmed Cases', confirmed)
                 .addField('Recovered', recovered)
                 .addField('Deaths', deaths)
