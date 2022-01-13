@@ -1,10 +1,10 @@
 {
-  "name": "black",
+  "name": "ma3taz",
   "version": "2.1.0",
-  "description": "black",
-  "main": "black.js",
+  "description": "ma3taz",
+  "main": "ma3taz.js",
   "scripts": {
-    "start": "node black.js"
+    "start": "node ma3taz.js"
   },
   "dependencies": {
     "discord.js": "^12.4.0",
